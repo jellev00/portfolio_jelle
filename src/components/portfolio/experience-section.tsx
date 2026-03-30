@@ -23,10 +23,10 @@ const opleidingen = [
 
 const ervaringen = [
   {
-    functie: "Job student Elektricien",
-    bedrijf: "ATS nv Groep",
-    jaartal: "2022 - Heden",
-    beschrijving: "Bordenbouw. Het bouwen van elektrische borden/kasten",
+    functie: "Bachelorproef",
+    bedrijf: "Springbok Agency",
+    jaartal: "2026 - 2026",
+    beschrijving: "Bouwen van een dependency dashboard met AI implementaties voor analyses",
   },
   {
     functie: "Stage Developer",
@@ -35,10 +35,10 @@ const ervaringen = [
     beschrijving: "Bouwen van een dependency tracker",
   },
   {
-    functie: "Bachelorproef",
-    bedrijf: "Springbok Agency",
-    jaartal: "2026 - 2026",
-    beschrijving: "Bouwen van een dependency dashboard met AI implementaties voor analyses",
+    functie: "Job student Elektricien",
+    bedrijf: "ATS nv Groep",
+    jaartal: "2022 - Heden",
+    beschrijving: "Bordenbouw. Het bouwen van elektrische borden/kasten",
   },
 ]
 
