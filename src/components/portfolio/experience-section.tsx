@@ -8,7 +8,7 @@ const opleidingen = [
     beschrijving: "Specialisatie in Software Engineering & IT.",
   },
   {
-    titel: "Graduaar Programmeren",
+    titel: "Graduaat Programmeren",
     instelling: "HoGent",
     jaartal: "2022 - 2024",
     beschrijving: "Gefocust op programmeren",
