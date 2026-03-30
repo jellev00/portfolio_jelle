@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { Mail, Phone, Linkedin, Send } from "lucide-react"
+import { Mail, Phone, Linkedin, Send, Github } from "lucide-react"
 
 const contactInfo = [
   {
@@ -21,6 +21,12 @@ const contactInfo = [
     label: "LinkedIn",
     value: "linkedin.com/in/jelle-vandriessche/",
     href: "https://www.linkedin.com/in/jelle-vandriessche/",
+  },
+  {
+    icon: Github,
+    label: "Github",
+    value: "github.com/jellev00",
+    href: "https://github.com/jellev00",
   },
 ]
 
