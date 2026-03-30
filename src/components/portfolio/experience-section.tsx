@@ -15,7 +15,7 @@ const opleidingen = [
   },
   {
     titel: "Industriële ICT",
-    instelling: "HoGent",
+    instelling: "GO! Atheneum Oudenaarde",
     jaartal: "2016 - 2022",
     beschrijving: "Gefocust op programmeren op Industrieel vlak en elektriciteit en elektronica",
   },
@@ -26,7 +26,7 @@ const ervaringen = [
     functie: "Job student Elektricien",
     bedrijf: "ATS nv Groep",
     jaartal: "2022 - Heden",
-    beschrijving: "Borden bouw. Het bouwen van elektrische borden/kasten",
+    beschrijving: "Bordenbouw. Het bouwen van elektrische borden/kasten",
   },
   {
     functie: "Stage Developer",
