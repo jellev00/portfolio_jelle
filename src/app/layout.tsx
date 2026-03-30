@@ -9,7 +9,7 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'Portfolio | Front-end Developer & Designer',
+  title: 'Portfolio | Jelle Vandriessche',
   description: 'Persoonlijke portfolio website van een software developer. Bekijk mijn ervaring, opleiding en neem contact op.',
   icons: {
     icon: [
