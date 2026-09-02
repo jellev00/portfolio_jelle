@@ -9,7 +9,7 @@ export default function LanguageToggle() {
     <button
       type="button"
       onClick={toggleLanguage}
-      className="font-mono uppercase text-xs px-4 py-2 rounded-full border border-[var(--border)] text-[var(--text)] transition-colors hover:text-[var(--text)] hover:border-[var(--text2)]"
+      className="font-mono uppercase text-xs px-4 py-3 rounded-full border border-[var(--border)] text-[var(--text)] transition-colors hover:text-[var(--text)] hover:border-[var(--text2)]"
     >
       {language === "nl" ? "EN" : "NL"}
     </button>

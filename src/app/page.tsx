@@ -32,7 +32,7 @@ export default function Home() {
             <Image src="/profile.png" alt={name} fill priority className="object-cover" />
           </div>
           <div className="flex flex-col gap-[22px]">
-            <h1 className="text-[40px] max-[900px]:text-[44px] leading-[1.02] font-bold tracking-[-0.03em]">
+            <h1 className="text-[40px] max-[900px]:text-[44px] max-[420px]:text-[36px] leading-[1.02] font-bold tracking-[-0.03em] break-words">
               {name}
             </h1>
             <span className="font-mono uppercase text-xs w-fit px-[13px] py-[7px] rounded-full bg-[var(--mint)] text-[var(--on-mint)]">
@@ -51,11 +51,11 @@ export default function Home() {
         </div>
 
         {/* Card 2: big title */}
-        <div className="card col-start-2 col-span-2 row-start-1 p-9 pb-7 min-h-[220px] flex flex-col justify-between hover:scale-[1.02] hover:border-[var(--text2)] transition-transform duration-200 max-[900px]:col-auto max-[900px]:row-auto">
+        <div className="card col-start-2 col-span-2 row-start-1 p-9 pb-7 max-[480px]:p-6 max-[480px]:pb-5 min-h-[220px] flex flex-col justify-between hover:scale-[1.02] hover:border-[var(--text2)] transition-transform duration-200 max-[900px]:col-auto max-[900px]:row-auto">
           <span className="font-mono uppercase text-xs tracking-[0.13em] text-[var(--text2)]">
             {t.bigTitle.eyebrow}
           </span>
-          <h2 className="text-[112px] max-[900px]:text-[76px] leading-[0.86] font-bold tracking-[-0.05em]">
+          <h2 className="text-[112px] max-[900px]:text-[76px] max-[480px]:text-[56px] leading-[0.86] font-bold tracking-[-0.05em] break-words">
             {t.bigTitle.title}
           </h2>
         </div>
@@ -135,12 +135,12 @@ export default function Home() {
       </section>
 
       {/* CTA */}
-      <section className="mt-[34px] rounded-2xl bg-[var(--coral)] p-[44px] py-11 flex flex-wrap items-center justify-between gap-7 hover:scale-[1.02] transition-transform duration-200">
-        <div>
+      <section className="mt-[34px] rounded-2xl bg-[var(--coral)] p-[44px] py-11 max-[560px]:p-7 max-[560px]:py-8 flex flex-wrap items-center justify-between gap-7 max-[560px]:flex-col max-[560px]:items-start hover:scale-[1.02] transition-transform duration-200">
+        <div className="min-w-0">
           <span className="font-mono uppercase text-xs tracking-[0.13em] text-[#5A1A08]">
             {t.cta.eyebrow}
           </span>
-          <h3 className="text-[44px] font-bold tracking-[-0.03em] text-[#2B0A00] mt-2">
+          <h3 className="text-[44px] max-[560px]:text-[32px] font-bold tracking-[-0.03em] text-[#2B0A00] mt-2 break-words">
             {t.cta.heading}
           </h3>
         </div>
@@ -164,12 +164,12 @@ export default function Home() {
           </span>
           <a
             href="mailto:jelle.vandriessche@gmail.com"
-            className="text-[22px] font-bold border-b border-[var(--border)] w-fit hover:border-[var(--mint)] transition-colors"
+            className="inline-block py-2 text-[22px] max-[420px]:text-[18px] font-bold border-b border-[var(--border)] w-fit max-w-full break-all hover:border-[var(--mint)] transition-colors"
           >
             jelle.vandriessche@gmail.com
           </a>
         </div>
-        <nav className="flex gap-2">
+        <nav className="flex flex-wrap gap-2">
           {socials.map((social) => (
             <a
               key={social.href}
@@ -177,7 +177,7 @@ export default function Home() {
               target="_blank"
               rel="noopener noreferrer"
               download={social.download}
-              className="font-mono text-xs px-4 py-[9px] rounded-full border border-[var(--border)] inline-flex items-center gap-[6px] whitespace-nowrap hover:border-[var(--text2)] hover:-translate-y-0.5 transition-all duration-200"
+              className="font-mono text-xs px-4 py-3 rounded-full border border-[var(--border)] inline-flex items-center gap-[6px] whitespace-nowrap hover:border-[var(--text2)] hover:-translate-y-0.5 transition-all duration-200"
             >
               <social.icon size={14} className="shrink-0" />
               {localize(social.label, language)}
