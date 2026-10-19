@@ -8,6 +8,7 @@ export type Social = {
   label: LocalizedString;
   href: string;
   download?: boolean;
+  action?: "cv-modal";
   icon: IconComponent;
 };
 
@@ -26,6 +27,7 @@ export const socials: Social[] = [
     label: { nl: "CV", en: "Resume" },
     href: "/documents/cv-jelle-vandriessche.pdf",
     download: true,
+    action: "cv-modal",
     icon: FileText,
   },
 ];

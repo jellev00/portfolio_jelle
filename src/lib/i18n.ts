@@ -51,6 +51,13 @@ type Dictionary = {
     contact: string;
     copyright: string;
   };
+  cvModal: {
+    title: string;
+    description: string;
+    dutch: string;
+    english: string;
+    close: string;
+  };
   detail: {
     back: string;
     liveSite: string;
@@ -75,7 +82,7 @@ export const translations: Record<Language, Dictionary> = {
       light: "Lichte modus",
     },
     hero: {
-      role: "Junior Web Developer",
+      role: "Junior Software Engineer",
       bio: "Ik bouw snelle, toegankelijke interfaces met oog voor cleane code en doordachte details.",
       availability: "Beschikbaar voor werk",
     },
@@ -111,6 +118,13 @@ export const translations: Record<Language, Dictionary> = {
       contact: "Contact",
       copyright: "© 2026 Jelle Vandriessche",
     },
+    cvModal: {
+      title: "Download CV",
+      description: "Kies de taalversie van het CV dat je wil downloaden.",
+      dutch: "Nederlands",
+      english: "Engels",
+      close: "Sluiten",
+    },
     detail: {
       back: "← Terug naar portfolio",
       liveSite: "Live site",
@@ -133,7 +147,7 @@ export const translations: Record<Language, Dictionary> = {
       light: "Light mode",
     },
     hero: {
-      role: "Junior Web Developer",
+      role: "Junior Software Engineer",
       bio: "I build fast, accessible interfaces with a focus on clean code and thoughtful details.",
       availability: "Available for work",
     },
@@ -168,6 +182,13 @@ export const translations: Record<Language, Dictionary> = {
     footer: {
       contact: "Contact",
       copyright: "© 2026 Jelle Vandriessche",
+    },
+    cvModal: {
+      title: "Download Resume",
+      description: "Choose the language version of the Resume you'd like to download.",
+      dutch: "Dutch",
+      english: "English",
+      close: "Close",
     },
     detail: {
       back: "← Back to portfolio",

@@ -41,7 +41,7 @@ export const experience: ExperienceEntry[] = [
   },
   {
     group: "Opleiding",
-    period: { nl: "2024 - 2026", en: "2024 - 2026" },
+    period: { nl: "2024 - 2027", en: "2024 - 2027" },
     role: { nl: "Bachelor Toegepaste Informatica", en: "Bachelor of Applied Computer Science" },
     organisation: { nl: "HoGent", en: "HoGent" },
     description: {

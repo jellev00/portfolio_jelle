@@ -1,5 +1,6 @@
 "use client";
 
+import { useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Mail } from "lucide-react";
@@ -7,6 +8,7 @@ import Header from "@/components/Header";
 import Placeholder from "@/components/Placeholder";
 import ExperienceTimeline from "@/components/ExperienceTimeline";
 import TechBadge from "@/components/TechBadge";
+import CvModal from "@/components/CvModal";
 import { projects } from "@/lib/data/projects";
 import { socials } from "@/lib/data/socials";
 import { useLanguage } from "@/context/language-context";
@@ -18,6 +20,8 @@ const name = "Jelle Vandriessche";
 export default function Home() {
   const { language } = useLanguage();
   const t = translations[language];
+  const cvButtonRef = useRef<HTMLButtonElement>(null);
+  const [isCvModalOpen, setIsCvModalOpen] = useState(false);
 
   return (
     <div className="max-w-[1180px] mx-auto px-[28px] pt-8 pb-6 flex flex-col gap-[14px]">
@@ -170,22 +174,40 @@ export default function Home() {
           </a>
         </div>
         <nav className="flex flex-wrap gap-2">
-          {socials.map((social) => (
-            <a
-              key={social.href}
-              href={social.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              download={social.download}
-              className="font-mono text-xs px-4 py-3 rounded-full border border-[var(--border)] inline-flex items-center gap-[6px] whitespace-nowrap hover:border-[var(--text2)] hover:-translate-y-0.5 transition-all duration-200"
-            >
-              <social.icon size={14} className="shrink-0" />
-              {localize(social.label, language)}
-            </a>
-          ))}
+          {socials.map((social) =>
+            social.action === "cv-modal" ? (
+              <button
+                key={social.href}
+                ref={cvButtonRef}
+                type="button"
+                onClick={() => setIsCvModalOpen(true)}
+                className="font-mono text-xs px-4 py-3 rounded-full border border-[var(--border)] inline-flex items-center gap-[6px] whitespace-nowrap hover:border-[var(--text2)] hover:-translate-y-0.5 transition-all duration-200"
+              >
+                <social.icon size={14} className="shrink-0" />
+                {localize(social.label, language)}
+              </button>
+            ) : (
+              <a
+                key={social.href}
+                href={social.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                download={social.download}
+                className="font-mono text-xs px-4 py-3 rounded-full border border-[var(--border)] inline-flex items-center gap-[6px] whitespace-nowrap hover:border-[var(--text2)] hover:-translate-y-0.5 transition-all duration-200"
+              >
+                <social.icon size={14} className="shrink-0" />
+                {localize(social.label, language)}
+              </a>
+            )
+          )}
         </nav>
       </footer>
       <p className="font-mono text-[11px] text-[var(--text2)] px-1">{t.footer.copyright}</p>
+      <CvModal
+        isOpen={isCvModalOpen}
+        onClose={() => setIsCvModalOpen(false)}
+        triggerRef={cvButtonRef}
+      />
     </div>
   );
 }
